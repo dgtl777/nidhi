@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 36</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(skyblue,slateblue);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+        button{
+            background-color: paleturquoise;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0px 2px 4px black;
+            color: slateblue;
+        }
+        h3{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz App</h1>
+        <h1 id="score">0</h1>
+    </header>
+    <h3>1. Who is the richest person in the world currently?</h3>
+    <label for="">Elon Musk</label>
+    <input type="radio" name="rich" id="" value="elon">
+    <label for="">Jeff Bezos</label>
+    <input type="radio" name="rich" id="" value="jeff"><br><br>
+    <label for="">Bill Gates</label>
+    <input type="radio" name="rich" id="" value="bill">
+    <label for="">Mark Zuckerberg</label>
+    <input type="radio" name="rich" id="" value="mark">
+    <h3>2. Which is the tallest building in the world?</h3>
+    <label for="">Big Ben</label>
+    <input type="radio" name="tall" id="" value="ben">
+    <label for="">Burj Khalifa</label>
+    <input type="radio" name="tall" id="" value="burj"><br><br>
+    <label for="">Shanghai Tower</label>
+    <input type="radio" name="tall" id="" value="shanghai">
+    <label for="">Eiffel Tower</label>
+    <input type="radio" name="tall" id="" value="eiffel">
+    <h3>3. Which dish is made in India?</h3>
+    <label for="">Sandwich</label>
+    <input type="radio" name="dish" id="" value="sandwich">
+    <label for="">Biryani</label>
+    <input type="radio" name="dish" id="" value="biryani"><br><br>
+    <label for="">Burger</label>
+    <input type="radio" name="dish" id="" value="burger">
+    <label for="">Pizza</label>
+    <input type="radio" name="dish" id="" value="pizza">
+    <h3>4. What is being held in Dubai in 2022?</h3>
+    <label for="">Expo</label>
+    <input type="radio" name="dubai" id="" value="expo">
+    <label for="">Olympics</label>
+    <input type="radio" name="dubai" id="" value="olympics"><br><br>
+    <label for="">Fifa world cup</label>
+    <input type="radio" name="dubai" id="" value="fifa">
+    <label for="">Icc world cup</label>
+    <input type="radio" name="dubai" id="" value="icc">
+    <h3>5. Which is the most dangerous animal?</h3>
+    <label for="">Lion</label>
+    <input type="radio" name="animal" id="" value="lion">
+    <label for="">Tiger</label>
+    <input type="radio" name="animal" id="" value="tiger"><br><br>
+    <label for="">Zebra</label>
+    <input type="radio" name="animal" id="" value="zeba">
+    <label for="">Cobra</label>
+    <input type="radio" name="animal" id="" value="cobra"><br><br>
+    <button onclick="check()">Submit Answer</button>
+    
+</body>
+<script>
+    var temp = false;
+    var score = 0;
+    function check(){
+        if(temp == false){
+
+        var rich = document
+        .querySelector('input[name="rich"]:checked').value;
+        if(rich == "elon"){
+            score = score + 1;
+            document.getElementById("score").innerText = 
+            score;
+        }
+        var tall = document
+        .querySelector('input[name="tall"]:checked').value;
+        if(tall == "burj"){
+            score = score + 1;
+            document.getElementById("score").innerText = 
+            score;
+        }
+        var dish = document
+        .querySelector('input[name="dish"]:checked').value;
+        if(dish == "biryani"){
+            score = score + 1;
+            document.getElementById("score").innerText = 
+            score;
+        }
+        var dubai = document
+        .querySelector('input[name="dubai"]:checked').value;
+        if(dubai == "expo"){
+            score = score + 1;
+            document.getElementById("score").innerText = 
+            score;
+        }
+        var animal = document
+        .querySelector('input[name="animal"]:checked').value;
+        if(animal == "cobra"){
+            score = score + 1;
+            document.getElementById("score").innerText = 
+            score;
+        }
+    }
+    temp = true;
+        
+    }
+
+</script>
+</html>

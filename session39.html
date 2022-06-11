@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 39</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(yellow,orangered);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: orange;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border: 10px solid white; 
+            display: none;
+        }
+        #a1{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Riddle App</h1>
+        <h2 id="score">0</h2>
+    </header>
+    <h3>What has to be broken before you can use it?</h3>
+    <input type="text" name="" id="a1">
+    <button onclick="q1()">Submit Answer</button>
+    <button onclick="h1()">Hint</button>
+    <h4 id="r1"></h4>
+    <img id="i1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn3VuLmdwYZE0VYnOJxihx9cDujdR_Mkyqq389eBmIs7P0winQPEsM37aDIDWnUL3R-6E&usqp=CAU" alt="">
+    
+</body>
+<script>
+    var score = 0;
+    var t1 = false;
+    var s1 = false;
+    function h1(){
+        if(t1 == false){
+            document.getElementById("i1").style.display = "inline-block";
+            t1 = true;
+            score = score - .5
+            document.getElementById("score").innerText = 
+            score;
+        }
+        else{
+            document.getElementById("i1").style.display = "none";
+            t1 = false;
+        }
+    }
+    function q1(){
+        if(s1 == false){
+        var a1 = document.getElementById("a1").value;
+        if(a1.toUpperCase() == "EGG"){
+            document.getElementById("r1").innerText = 
+            "Correct Answer";
+            score = score + 1;
+            document.getElementById("score").innerText = 
+            score;
+        }
+        else{
+            document.getElementById("r1").innerText = 
+            "Wrong Answer";
+        }
+        s1 = true;
+    }
+    }
+</script>
+</html>
